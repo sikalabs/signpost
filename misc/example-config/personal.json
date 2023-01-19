@@ -1,0 +1,89 @@
+{
+  "SiteHeading": "Ondrej Sika Signpost",
+	"CompanyName":   "Ondrej Sika",
+	"CompanyDomain": "ondrejsika.com",
+	"CompanyURL": "https://ondrejsika.com",
+	"Rows": [
+    {
+      "Cols": [
+        {
+          "Blocks": [
+            {
+              "Heading": "Personal",
+              "Links": [
+                {
+                  "Title": "ondrejsika.com",
+                  "URL": "https://ondrejsika.com"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Blocks": [
+            {
+              "Heading": "Freelance",
+              "Links": [
+                {
+                  "Title": "sika.io",
+                  "URL": "https://sika.io"
+                },
+                {
+                  "Title": "sikadevops.com",
+                  "URL": "https://sikadevops.com"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Blocks": [
+            {
+              "Heading": "SikaLabs",
+              "Links": [
+                {
+                  "Title": "sikalabs.com",
+                  "URL": "https://sikalabs.com"
+                }
+              ]
+            },
+            {
+              "Heading": "Trainera",
+              "Links": [
+                {
+                  "Title": "trainera.io",
+                  "URL": "https://trainera.io"
+                },
+                {
+                  "Title": "trainera.cz",
+                  "URL": "https://trainera.cz"
+                },
+                {
+                  "Title": "trainera.de",
+                  "URL": "https://trainera.de"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Cols": [
+        {
+          "Blocks": [
+            {
+              "Heading": "Random",
+              "Links": [
+                {
+                  "Title": "is.oxs.cz (island)",
+                  "URL": "https://is.oxs.cz"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
