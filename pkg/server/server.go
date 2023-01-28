@@ -37,6 +37,7 @@ var TEMPLATE = `<!DOCTYPE html>
 <html>
   <head>
     <title>{{.SiteHeading}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
         padding: 2em 2em;
