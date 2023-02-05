@@ -31,6 +31,7 @@ type Config struct {
 	CompanyDomain string
 	CompanyUrl    string
 	Rows          []Row
+	HtmlHeadExtra template.HTML `json:"HtmlHeadExtra"`
 }
 
 var TEMPLATE = `<!DOCTYPE html>
@@ -38,6 +39,7 @@ var TEMPLATE = `<!DOCTYPE html>
   <head>
     <title>{{.SiteHeading}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{.HtmlHeadExtra}}
     <style>
       body {
         padding: 2em 2em;
