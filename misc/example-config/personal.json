@@ -3,6 +3,7 @@
 	"CompanyName":   "Ondrej Sika",
 	"CompanyDomain": "ondrejsika.com",
 	"CompanyURL": "https://ondrejsika.com",
+	"HtmlHeadExtra": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/static/favicon.ico\">",
 	"Rows": [
     {
       "Cols": [
