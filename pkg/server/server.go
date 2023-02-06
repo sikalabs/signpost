@@ -156,5 +156,8 @@ func Server(config Config) error {
 	})
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
-	return http.ListenAndServe(":8000", nil)
+
+	port := 8000
+	fmt.Printf("Server started on 0.0.0.0:%d, see http://127.0.0.1:%d\n", port, port)
+	return http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 }
