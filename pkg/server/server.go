@@ -27,6 +27,7 @@ type Row struct {
 
 type Config struct {
 	SiteHeading   string
+	SiteTitle     string
 	CompanyName   string
 	CompanyDomain string
 	CompanyUrl    string
@@ -37,7 +38,7 @@ type Config struct {
 var TEMPLATE = `<!DOCTYPE html>
 <html>
   <head>
-    <title>{{.SiteHeading}}</title>
+    <title>{{.SiteTitle}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{.HtmlHeadExtra}}
     <style>
@@ -139,6 +140,10 @@ var TEMPLATE = `<!DOCTYPE html>
 var HTML string
 
 func Server(config Config) error {
+	if config.SiteTitle == "" {
+		config.SiteTitle = config.SiteHeading
+	}
+
 	t := template.Must(template.New("index-html").Parse(TEMPLATE))
 	var tpl bytes.Buffer
 	err := t.Execute(&tpl, config)
