@@ -126,7 +126,7 @@ var TEMPLATE = `<!DOCTYPE html>
       <div class="footer">
          <p>
             <strong>
-               {{.CompanyName}}, <a href="{{.CompanyUrl}}" target="_blank" style="color:black">{{.CompanyDomain}}</a>
+               {{.CompanyName}}{{ if and (.CompanyDomain) (.CompanyUrl) }}, <a href="{{.CompanyUrl}}" target="_blank" style="color:black">{{.CompanyDomain}}</a>{{end}}
             </strong>
          </p>
          <p class="right">
