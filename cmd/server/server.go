@@ -1,13 +1,13 @@
 package server
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"log"
 
 	"github.com/sikalabs/signpost/cmd/root"
 	"github.com/sikalabs/signpost/pkg/server"
 	"github.com/spf13/cobra"
+	"gopkg.in/yaml.v3"
 )
 
 var FlagConfigFile string
@@ -24,7 +24,7 @@ var Cmd = &cobra.Command{
 		if err != nil {
 			log.Fatal(err)
 		}
-		err = json.Unmarshal(configFileBytes, &config)
+		err = yaml.Unmarshal(configFileBytes, &config)
 		if err != nil {
 			log.Fatal(err)
 		}
