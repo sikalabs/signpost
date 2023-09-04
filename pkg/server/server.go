@@ -8,31 +8,31 @@ import (
 )
 
 type Link struct {
-	Title string
-	Url   string
+	Title string `yaml:"Title"`
+	Url   string `yaml:"URL"`
 }
 
 type Block struct {
-	Heading string
-	Links   []Link
+	Heading string `yaml:"Heading"`
+	Links   []Link `yaml:"Links"`
 }
 
 type Col struct {
-	Blocks []Block
+	Blocks []Block `yaml:"Blocks"`
 }
 
 type Row struct {
-	Cols []Col
+	Cols []Col `yaml:"Cols"`
 }
 
 type Config struct {
-	SiteHeading   string
-	SiteTitle     string
-	CompanyName   string
-	CompanyDomain string
-	CompanyUrl    string
-	Rows          []Row
-	HtmlHeadExtra template.HTML `json:"HtmlHeadExtra"`
+	SiteHeading   string        `yaml:"SiteHeading"`
+	SiteTitle     string        `yaml:"SiteTitle"`
+	CompanyName   string        `yaml:"CompanyName"`
+	CompanyDomain string        `yaml:"CompanyDomain"`
+	CompanyUrl    string        `yaml:"CompanyUrl"`
+	Rows          []Row         `yaml:"Rows"`
+	HtmlHeadExtra template.HTML `json:"HtmlHeadExtra" yaml:"HtmlHeadExtra"`
 }
 
 var TEMPLATE = `<!DOCTYPE html>
