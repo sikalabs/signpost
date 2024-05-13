@@ -5,6 +5,20 @@
 	"CompanyDomain": "ondrejsika.com",
 	"CompanyURL": "https://ondrejsika.com",
 	"HtmlHeadExtra": "<link rel=\"icon\" type=\"image/x-icon\" href=\"/static/favicon.ico\">",
+  "ExtraFooterLinks": [
+    {
+      "Title": "version.json",
+      "URL": "/static/version.json"
+    },
+    {
+      "Title": "ond.is",
+      "URL": "https://ond.is"
+    },
+    {
+      "Title": "rej.is",
+      "URL": "https://rej.is"
+    }
+  ],
 	"Rows": [
     {
       "Cols": [
