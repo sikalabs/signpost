@@ -26,13 +26,14 @@ type Row struct {
 }
 
 type Config struct {
-	SiteHeading   string        `yaml:"SiteHeading"`
-	SiteTitle     string        `yaml:"SiteTitle"`
-	CompanyName   string        `yaml:"CompanyName"`
-	CompanyDomain string        `yaml:"CompanyDomain"`
-	CompanyUrl    string        `yaml:"CompanyUrl"`
-	Rows          []Row         `yaml:"Rows"`
-	HtmlHeadExtra template.HTML `json:"HtmlHeadExtra" yaml:"HtmlHeadExtra"`
+	SiteHeading      string        `yaml:"SiteHeading"`
+	SiteTitle        string        `yaml:"SiteTitle"`
+	CompanyName      string        `yaml:"CompanyName"`
+	CompanyDomain    string        `yaml:"CompanyDomain"`
+	CompanyUrl       string        `yaml:"CompanyUrl"`
+	Rows             []Row         `yaml:"Rows"`
+	ExtraFooterLinks []Link        `yaml:"ExtraFooterLinks"`
+	HtmlHeadExtra    template.HTML `json:"HtmlHeadExtra" yaml:"HtmlHeadExtra"`
 }
 
 var TEMPLATE = `<!DOCTYPE html>
@@ -129,6 +130,13 @@ var TEMPLATE = `<!DOCTYPE html>
                {{.CompanyName}}{{ if and (.CompanyDomain) (.CompanyUrl) }}, <a href="{{.CompanyUrl}}" target="_blank" style="color:black">{{.CompanyDomain}}</a>{{end}}
             </strong>
          </p>
+         {{ if .ExtraFooterLinks }}
+				 <p style="font-size: 0.8em">
+            {{ range $_, $link := .ExtraFooterLinks }}
+              <a href="{{$link.Url}}" target="_blank" style="color:black">{{$link.Title}}</a>
+            {{ end }}
+         </p>
+         {{ end }}
          <p class="right">
             <a href="https://github.com/sikalabs/signpost" target="_blank" style="color:black">signpost</a> by <a href="https://sikalabs.com" target="_blank" style="color:black">sikalabs</a>
          </p>
