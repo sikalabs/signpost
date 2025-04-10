@@ -1,3 +1,7 @@
 # signpost
 
+**Signpost** is a tool that serves as a web hub where you can have all important links in one place. It allows you to centralize access to relevant resources, documents, or applications, making navigation easier and saving time.
+
+Signpost is configrured using a single **YAML** file, designed to by simple, GitOps, and Kubernetes friendly.
+
 ![signpost screenshot](./signpost.png)
