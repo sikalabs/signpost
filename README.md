@@ -5,3 +5,7 @@
 Signpost is configrured using a single **YAML** file, designed to by simple, GitOps, and Kubernetes friendly.
 
 ![signpost screenshot](./signpost.png)
+
+## Examples
+
+See [examples](./examples) for a few examples of how to configure signpost.
