@@ -75,6 +75,7 @@ dockers:
       goarch: amd64
       image_templates:
         - "sikalabs/signpost:{{ .Tag }}"
+        - "ghcr.io/sikalabs/signpost:{{ .Tag }}"
       dockerfile: Dockerfile
       ids:
         - signpost
@@ -94,6 +95,7 @@ dockers:
       goarch: arm64
       image_templates:
         - "sikalabs/signpost:{{ .Tag }}-arm64v8"
+        - "ghcr.io/sikalabs/signpost:{{ .Tag }}-arm64v8"
       dockerfile: Dockerfile.arm64v8
       ids:
         - signpost
