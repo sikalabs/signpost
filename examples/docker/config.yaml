@@ -1,0 +1,46 @@
+---
+SiteHeading: SikaDemo Signpost
+CompanyName: SikaDemo
+CompanyDomain: sikademo.com
+CompanyUrl: https://sikademo.com
+CompanyLogo:
+HtmlHeadExtra: <link rel="icon" type="image/png" href="https://sikademo.com/SD23_white_on_yellow.png" />
+Rows:
+  - Cols:
+    - Blocks:
+      - Heading: Global
+        Links:
+          - Title: Gitlab (gitlab.sikademo.com)
+            URL: https://gitlab.sikademo.com
+          - Title: SSO (sso.sikademo.com)
+            URL: https://sso.sikademo.com/admin
+          - Title: Stand up (Google Meet)
+            URL: https://go.sikademo.com/standup-meet
+      - Heading: Monitoring
+        Links:
+          - Title: Grafana (grafana.sikademo.com)
+            URL: https://grafana.sikademo.com
+          - Title: Kibana (kibana.sikademo.com)
+            URL: https://kibana.sikademo.com
+    - Blocks:
+      - Heading: Production
+        Links:
+          - Title: ArgoCD (argocd.prod.sikademo.com)
+            URL: https://argocd.prod.sikademo.com
+          - Title: Harbor (harbor.prod.sikademo.com)
+            URL: https://harbor.prod.sikademo.com
+          - Title: Grafana (grafana.prod.sikademo.com)
+            URL: https://grafana.prod.sikademo.com
+          - Title: Kibana (kibana.prod.sikademo.com)
+            URL: https://kibana.prod.sikademo.com
+    - Blocks:
+      - Heading: Development
+        Links:
+          - Title: ArgoCD (argocd.dev.sikademo.com)
+            URL: https://argocd.dev.sikademo.com
+          - Title: Harbor (harbor.dev.sikademo.com)
+            URL: https://harbor.dev.sikademo.com
+          - Title: Grafana (grafana.dev.sikademo.com)
+            URL: https://grafana.dev.sikademo.com
+          - Title: Kibana (kibana.dev.sikademo.com)
+            URL: https://kibana.dev.sikademo.com
