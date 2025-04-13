@@ -162,6 +162,12 @@ func Server(config Config) error {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, HTML)
 	})
+	http.HandleFunc("/readyz", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "OK\n")
+	})
+	http.HandleFunc("/livez", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "OK\n")
+	})
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
