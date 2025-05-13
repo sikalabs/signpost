@@ -1,3 +1,5 @@
+version: 2
+
 project_name: signpost
 
 before:
@@ -55,13 +57,13 @@ checksum:
 brews:
   -
     name: signpost
-    tap:
+    repository:
       owner: sikalabs
       name: homebrew-tap
     skip_upload: auto
     homepage: https://github.com/sikalabs/signpost
     url_template: "https://github.com/sikalabs/signpost/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-    folder: Formula
+    directory: Formula
     caveats: "How to use this binary: https://github.com/sikalabs/signpost"
     description: "signpost"
     install: |
