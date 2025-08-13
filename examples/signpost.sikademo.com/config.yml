@@ -33,6 +33,13 @@ Rows:
             URL: https://grafana.prod.sikademo.com
           - Title: Kibana (kibana.prod.sikademo.com)
             URL: https://kibana.prod.sikademo.com
+          - Title: Proxmox
+            URL: https://proxmox.prod.sikademo.com
+            ExtraLinks:
+              - Title: pve1
+                URL: https://pve1.prod.sikademo.com:8006
+              - Title: pve2
+                URL: https://pve2.prod.sikademo.com:8006
     - Blocks:
       - Heading: Development
         Links:
