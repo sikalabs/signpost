@@ -1,8 +1,8 @@
 package server
 
 import (
-	"io/ioutil"
 	"log"
+	"os"
 
 	"github.com/sikalabs/signpost/cmd/root"
 	"github.com/sikalabs/signpost/pkg/server"
@@ -20,7 +20,7 @@ var Cmd = &cobra.Command{
 	Run: func(c *cobra.Command, args []string) {
 		config := server.Config{}
 
-		configFileBytes, err := ioutil.ReadFile(FlagConfigFile)
+		configFileBytes, err := os.ReadFile(FlagConfigFile)
 		if err != nil {
 			log.Fatal(err)
 		}
