@@ -7,9 +7,15 @@ import (
 	"net/http"
 )
 
-type Link struct {
+type ExtraLink struct {
 	Title string `yaml:"Title"`
 	Url   string `yaml:"URL"`
+}
+
+type Link struct {
+	Title      string      `yaml:"Title"`
+	Url        string      `yaml:"URL"`
+	ExtraLinks []ExtraLink `yaml:"ExtraLinks"`
 }
 
 type Block struct {
@@ -116,7 +122,12 @@ var TEMPLATE = `<!DOCTYPE html>
                 {{range $_, $block := $col.Blocks}}
                   <h2>{{.Heading}}</h2>
                   {{range $_, $link := $block.Links}}
-                    <p><a class="button" target="_blank" rel="noopener noreferrer" href="{{$link.Url}}" >{{$link.Title}}</a></p>
+                    <p>
+											<a class="button" target="_blank" rel="noopener noreferrer" href="{{$link.Url}}" >{{$link.Title}}</a>
+											{{range $_, $extraLink := $link.ExtraLinks}}
+												<a class="button" target="_blank" rel="noopener noreferrer" href="{{$extraLink.Url}}" >{{$extraLink.Title}}</a>
+											{{end}}
+										</p>
                   {{end}}
                 {{end}}
             </div>
